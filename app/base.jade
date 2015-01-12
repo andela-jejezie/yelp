@@ -1,0 +1,43 @@
+.container
+  header.userProfile
+    include shared/signedin_header
+  ng-include(src='"pages/settings.html"')
+  material-content.footer
+    include shared/footer
+    
+
+  //- body(ahhlife layout="horizontal")
+    //- material-sidenav.material-sidenav-left.material-whiteframe-z3(layout="vertical" component-id="left")
+    //-   material-toolbar.material-medium-tall
+    //-     a(href="/")
+    //-       h1 Sidetime
+    //-   material-content(flex)
+    //-     div(ng-if="currentUser")
+    //-       material-button.menu-item.menu-title(ng-href="/something") Navigation item 1
+    //-       material-button.menu-item.menu-title(ng-href="/somethingelse") Navigation item 2
+
+    //- div
+    //-   menu-icon(ng-click="openLeftMenu()")
+    //-     i.fa.fa-bars(hide-md hide-lg)
+    //-   material-content.main
+    //-     .container-fluid.view-animate-container
+    //-       .content
+    //-         header(layout="horizontal")
+    //-           padding &nbsp;
+    //-           auth
+    //-             .sign-in(ng-hide="currentUser")
+    //-               material-button.material-theme-green(ng-click="login('google')")
+    //-                 span login
+    //-             .dropdown(ng-show="currentUser" ng-cloak)
+    //-               a(href="#").dropdown-toggle
+    //-                 img.avatar(ng-src="{{currentUser.picture}}")
+    //-               ul.dropdown-menu.dropdown-menu-right(role="menu")
+    //-                 li.dropdown-header(role="presentation")
+    //-                   | Signed in as {{ currentUser.email }}
+    //-                 li
+    //-                   a(href="/settings") Account Settings
+    //-                 li
+    //-                   a(ng-click="logout()") Sign out
+      //-       .view-animate(ng-view)
+      //- material-content.footer
+      //-   include shared/footer
